@@ -11,12 +11,12 @@ class Movie extends Model
     /**
      * Get the poster's path.
      *
-     * @param array $movie
+     * @param  array  $movie
+     *
      * @return string
      */
-
     public function getPosterPathAttribute()
     {
-        return "https://image.tmdb.org/t/p/w500" . $this->poster;
+        return "https://image.tmdb.org/t/p/w500".$this->poster;
     }
 }
