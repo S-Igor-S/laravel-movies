@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('movies')
+@section('content')
     @foreach ($movies as $movie)
         <article class="offset-1">
             <h1>
