@@ -7,7 +7,10 @@ use App\Models\Movie;
 
 class MovieController extends Controller
 {
-    public static function displayMovies() {
-        return Movie::all();
+    public function index()
+    {
+        return view('movies', [
+            'movies' => Movie::all(),
+        ]);
     }
 }
