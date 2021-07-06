@@ -1,4 +1,6 @@
-<x-layout>
+@extends('layouts/app');
+
+@section('movies')
     @foreach ($movies as $movie)
         <article class="offset-1">
             <h1>
@@ -15,4 +17,4 @@
         </article>
         <hr>
     @endforeach
-</x-layout>
+@endsection
