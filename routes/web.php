@@ -15,7 +15,5 @@ use App\Http\Controllers\MovieController;
 |
 */
 
-Route::get('/', function () {
-    return view('archive')->with('archive', MovieController::displayMovies());
-});
+Route::resource('/', MovieController::class, ['index']);
 
