@@ -17,6 +17,6 @@ class Movie extends Model
 
     public function getPosterPathAttribute()
     {
-        return "https://image.tmdb.org/t/p/w500" . $this->Poster;
+        return "https://image.tmdb.org/t/p/w500" . $this->poster;
     }
 }
