@@ -25,7 +25,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(new AddMovies)->daily();
+        $schedule->call(new AddMovies)->everySixHours();
     }
 
     /**
