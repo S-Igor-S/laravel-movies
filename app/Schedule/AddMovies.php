@@ -15,9 +15,9 @@ class AddMovies
      *
      * @param  int  $page
      *
-     * @param  array  $movies
+     * @param array $apiResult
      *
-     * //     * @return array
+     * @param  array  $movies
      */
     public function __invoke()
     {
