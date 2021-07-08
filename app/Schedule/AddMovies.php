@@ -21,6 +21,7 @@ class AddMovies
      */
     public function __invoke()
     {
+        ini_set('max_execution_time', 600);
         $apiKey = "4cfd492e96032cebac671d980c203663";
         $page   = 1;
         do {
