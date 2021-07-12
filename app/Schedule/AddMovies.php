@@ -10,8 +10,6 @@ class AddMovies
     /**
      * Get the TMDB api key.
      *
-     * @param  string  $apiKey
-     *
      * @param  string  $response
      *
      * @param  int  $page
