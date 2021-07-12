@@ -3,6 +3,7 @@
 namespace App\Schedule;
 
 use App\Models\Movie;
+use Illuminate\Support\Facades\Http;
 
 class AddMovies
 {
@@ -21,12 +22,13 @@ class AddMovies
      */
     public function __invoke()
     {
-        ini_set('max_execution_time', 600);
-        $apiKey = "4cfd492e96032cebac671d980c203663";
         $page   = 1;
         do {
-            $response  = "https://api.themoviedb.org/3/discover/movie?api_key=".$apiKey."&page=".$page;
-            $apiResult = json_decode(file_get_contents($response), true);
+            $response = Http::get('https://api.themoviedb.org/3/discover/movie', [
+                'api_key' => env('API_KEY'),
+                'page' => $page,
+            ]);
+            $apiResult = $response->json();
             $movies    = $apiResult['results'];
             array_map(function ($movie) {
                 Movie::firstOrCreate([
