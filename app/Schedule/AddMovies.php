@@ -4,6 +4,7 @@ namespace App\Schedule;
 
 use App\Models\Movie;
 use Illuminate\Support\Facades\Http;
+use \Illuminate\Support\Str;
 
 class AddMovies
 {
@@ -33,7 +34,8 @@ class AddMovies
                     'name'        => $movie['title'],
                     'description' => $movie['overview'],
                     'tmdb_id'     => $movie['id'],
-                    'poster'      => $movie['poster_path']
+                    'poster'      => $movie['poster_path'],
+                    'slug' => strtolower(Str::slug($movie->name, "_"))
                 ],
                 );
             }, $movies);
