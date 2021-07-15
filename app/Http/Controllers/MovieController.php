@@ -14,11 +14,12 @@ class MovieController extends Controller
             'movies' => Movie::paginate(20),
         ]);
     }
+
     public function single(Movie $movie)
     {
         return view('movies.single', [
             'rootUrl' => URL::to('/'),
-            'movie' => $movie,
-       ]);
+            'movie'   => $movie,
+        ]);
     }
 }
