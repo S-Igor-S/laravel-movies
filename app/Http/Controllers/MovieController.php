@@ -13,4 +13,8 @@ class MovieController extends Controller
             'movies' => Movie::paginate(20),
         ]);
     }
+    public function single()
+    {
+        return view('movies.single');
+    }
 }
