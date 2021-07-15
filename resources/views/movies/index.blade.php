@@ -8,10 +8,8 @@
         @foreach ($movies as $movie)
             <article class="offset-1">
                 <h1>
-                    {{ $movie->name }}
+                    <a href="movies/{{ strtolower(\Illuminate\Support\Str::slug($movie->name, "_")) }}">{{ $movie->name }}</a>
                 </h1>
-                <h2>
-                </h2>
                 <div class="row">
                     <div class="col-sm">
                         <img class="" src="{{ $movie->PosterPath }}" alt="poster">
