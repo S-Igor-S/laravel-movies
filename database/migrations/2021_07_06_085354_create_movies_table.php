@@ -19,6 +19,7 @@ class CreateMoviesTable extends Migration
             $table->text('description');
             $table->integer('tmdb_id');
             $table->string('poster');
+            $table->string('slug');
             $table->timestamps();
         });
     }
