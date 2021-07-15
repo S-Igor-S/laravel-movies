@@ -35,7 +35,6 @@ class AddMovies
                     'description' => $movie['overview'],
                     'tmdb_id'     => $movie['id'],
                     'poster'      => $movie['poster_path'],
-                    'slug' => strtolower(Str::slug($movie->name, "_"))
                 ],
                 );
             }, $movies);
