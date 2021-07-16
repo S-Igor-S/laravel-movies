@@ -15,10 +15,9 @@ class MovieController extends Controller
         ]);
     }
 
-    public function single(Movie $movie)
+    public function show(Movie $movie)
     {
-        return view('movies.single', [
-            'rootUrl' => URL::to('/'),
+        return view('movies.show', [
             'movie'   => $movie,
         ]);
     }

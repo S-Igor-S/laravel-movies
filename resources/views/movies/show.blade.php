@@ -12,7 +12,7 @@
                 </div>
                 <div class="col-sm">
                     {{ $movie->description }}
-                    <h4><a href="{{ $rootUrl }}/movies">Return to archive</a></h4>
+                    <h4><a href="{{ url('/') }}/movies">Return to archive</a></h4>
                 </div>
             </div>
         </article>
